@@ -42,6 +42,15 @@ function handleSearch(event) {
   handleSearchTerm(searchTerm)
 }
 
+// Disable search button press when nothing in input
+function success() {
+  if(document.getElementById("search__bar").value === "") {
+    document.getElementById("search__button--id").disabled = true
+  } else {
+    document.getElementById("search__button--id").disabled = false
+  }
+}
+
 // Fetch the movie imdb data to use on click
 function showMovieImdb(imdb) {
   localStorage.setItem('movieImdb', imdb);
