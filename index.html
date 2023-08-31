@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Movie Database</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a76b169c3c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="page__container">
+    <div id="content__container">
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="nav__bar">
+              <a href="./index.html"
+                ><div class="logo__container">
+                  <figure class="logo__wrapper">
+                    <i class="fa-solid fa-film"></i>
+                  </figure>
+                  <h2 class="site__name">CineBase</h2>
+                </div></a
+              >
+
+              <div class="links__wrapper">
+                <figure class="bars__wrapper">
+                  <i class="fa-solid fa-bars"></i>
+                </figure>
+                <li class="links">
+                  <ul href="" class="link link__hover--effect">
+                    Home
+                  </ul>
+                  <ul href="" class="link link__hover--effect">
+                    Find Your Movies
+                  </ul>
+                </li>
+                <div class="contact__button__wrapper">
+                  <a href="#" class="contact__button">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="sub__title">
+              <h1 class="title">World's most complete movie database</h1>
+            </div>
+            <div class="search__bar--container">
+              <label for="site-search" class="search__label"
+                >Search your favourite movies here:</label
+              >
+              <div class="search__bar--wrapper">
+                <input
+                  required
+                  type="search"
+                  id="search__bar"
+                  placeholder="Where the magic happens..."
+                />
+                <button
+                  class="search__button"
+                  type="submit"
+                  onclick="showDiv()"
+                >
+                  <i
+                    id="magnifying-glass"
+                    class="fa-solid fa-magnifying-glass"
+                  ></i>
+                  <div class="button__loading--overlay">
+                    <i id="spinner" class="fas fa-spinner"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <figure class="image__wrapper">
+              <img
+                class="background__image"
+                src="./assets/undraw_awards_fieb.svg"
+                alt=""
+              />
+            </figure>
+          </div>
+        </div>
+      </header>
+
+      <div class="row"></div>
+
+      <section id="movies__section">
+        <div class="row">
+          <div class="search__nav">
+            <div class="search__n__filter">
+              <h2 class="search__h2">Search Results:</h2>
+              <div class="filter__result">
+                <select name="" id="filter" onchange="sortMovies(event)">
+                  <option value="" disabled selected>
+                    Sort by Release Year
+                  </option>
+                  <option value="LOW_TO_HIGH">Ascending</option>
+                  <option value="HIGH_TO_LOW">Descending</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div class="slider__container"> // Hidden until I manage to work this out
+              <h3>
+                Release Year: between <span class="slider__year">1900 </span> and
+                <span class="slider__year-2">2023</span>
+              </h3>
+              <div class="slider__body"></div>
+              <div class="slider__wrapper">
+                <input
+                  type="range"
+                  min="1900"
+                  max="2023"
+                  value="1900"
+                  class="slider"
+                  id="myRange"
+                />
+                <input
+                  type="range"
+                  min="1900"
+                  max="2023"
+                  value="1900"
+                  class="slider_2"
+                  id="myRange-2"
+                />
+              </div> -->
+          </div>
+        </div>
+        <div class="movies">
+          <!-- <div class="movie">
+              <div class="movie__title">
+                  <div class="movie__title--wrapper">
+                      <h3>Movie Title</h3>
+                          <p>Year</p>
+                          <p>Language</p>
+                          <p>Metascore</p>
+                  </div>
+              </div>
+              <div class="movie__poster--wrapper">
+                  <img class="movie__poster" src="" alt="">
+              </div>
+          </div> -->
+        </div>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <div class="logo__container">
+        <figure class="logo__wrapper">
+          <i class="fa-solid fa-film"></i>
+        </figure>
+        <h2>CineBase</h2>
+      </div>
+      <div class="copyright">© 2023 CineBase All Right Reserved</div>
+      <div class="social__container">
+        <figure>
+          <a href="http://www.google.com" target="_blank" class="social__link"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </figure>
+        <figure>
+          <a href="http://www.github.com" target="_blank" class="social__link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </figure>
+      </div>
+    </footer>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
